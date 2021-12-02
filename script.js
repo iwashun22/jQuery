@@ -20,4 +20,15 @@ $(function(){
 
       $('#'+boxId).siblings().removeClass('red');
    })
+
+   $('.nav li').on('click', function() {
+      const listBtn = $(this);
+      const index = listBtn.index();
+      listBtn.addClass('active');
+      listBtn.siblings().removeClass('active');
+
+      const selectedNavBox = $('.nav-box').eq(index);
+      selectedNavBox.addClass('active');
+      selectedNavBox.siblings().removeClass('active');
+   })
 })

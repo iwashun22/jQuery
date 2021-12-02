@@ -38,6 +38,37 @@
          display: flex;
          max-width: 700px;
       }
+      ul{
+         margin: 0;
+      }
+      ul.nav{
+         list-style: none;
+         width: 400px;
+         display: flex;
+      }
+      ul.nav li{
+         flex: 1;
+         background-color: rgb(211, 211, 211);
+         text-align: center;
+         margin: 0 3px;
+         border-top: 1px black solid;
+         border-right: 1px black solid;
+         border-top-right-radius: 10px; 
+         cursor: pointer;
+      }
+      ul.nav li:hover{
+         background-color: rgb(194, 194, 194);
+      }
+      .nav-box{
+         display: none;
+         background-color: rgb(167, 167, 167);
+      }
+      .nav-box.active{
+         display: block
+      }
+      .active{
+         background-color: rgb(160, 160, 160) !important;
+      }
    </style>
 </head>
 <body>
@@ -65,5 +96,48 @@
          <h3>Box4</h3>
       </div>
    </div>
+
+   <br/>
+
+   <section>
+      <ul class="nav">
+         <li class="active">Panel 1</li>
+         <li>Panel 2</li>
+         <li>Panel 3</li>
+         <li>Panel 4</li>
+      </ul>
+      <div class="nav-box active">
+         <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+         </ul>
+      </div>
+      <div class="nav-box">
+         <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+            <li>List 4</li>
+         </ul>
+      </div>
+      <div class="nav-box">
+         <ul>
+            <li>Hello 1</li>
+            <li>Hello 2</li>
+            <li>Hello 3</li>
+            <li>Hello 4</li>
+         </ul>
+      </div>
+      <div class="nav-box">
+         <ul>
+            <li>Text 1</li>
+            <li>Text 2</li>
+            <li>Text 3</li>
+            <li>Text 4</li>
+         </ul>
+      </div>
+   </section>
 </body>
 </html>
