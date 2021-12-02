@@ -17,5 +17,7 @@ $(function(){
       const boxId = $(this).attr('data-box-id');
       console.log(boxId);
       $('#'+boxId).toggleClass('red');
+
+      $('#'+boxId).siblings().removeClass('red');
    })
 })
