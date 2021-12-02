@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>jQuery</title>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="script.js"></script>
+   <style>
+      .box{
+         display: inline-block;
+         margin: 10px 10px;
+         width: 100px;
+         background-color: rgb(223, 223, 223);
+         border-radius: 15px;
+         box-shadow: 4px 4px 4px rgb(109, 109, 109);
+      }
+      .box h3{
+         text-align: center;
+      }
+      .header-space{
+         min-height: 100px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      #header{
+         margin: 0;
+      }
+      .red{
+         color: red;
+         background-color: rgb(255, 212, 253);
+         box-shadow: 4px 4px 4px rgb(145, 77, 139);
+      }
+   </style>
+</head>
+<body>
+   <div class="header-space">
+      <h1 id="header">Hello world</h1>
+   </div>
+   <div>
+      <button class="btn" data-box-id="box1">click me I</button>
+      <button class="btn" data-box-id="box2">click me II</button>
+      <button class="btn" data-box-id="box3">click me III</button>
+      <button class="btn" data-box-id="box4">click me IV</button>
+   </div>
+      
+   <div class="box" id="box1">
+      <h3>Box1</h3>
+   </div>
+   <div class="box" id="box2">
+      <h3>Box2</h3>
+   </div>
+   <div class="box" id="box3">
+      <h3>Box3</h3>
+   </div>
+   <div class="box" id="box4">
+      <h3>Box4</h3>
+   </div>
+</body>
+</html>
