@@ -6,7 +6,7 @@
 
 
 // this is exact same as code above. 
-// It will wait until the document loads up, so should not forget to inlude
+// It will wait until the document loads up, so should not forget to include
 $(function(){
 
    // code goes here
