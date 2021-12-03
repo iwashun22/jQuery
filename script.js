@@ -21,14 +21,30 @@ $(function(){
       $('#'+boxId).siblings().removeClass('red');
    })
 
+   $('.nav-box.active').slideDown(300);
+   let isReady = true;
    $('.nav li').on('click', function() {
-      const listBtn = $(this);
-      const index = listBtn.index();
-      listBtn.addClass('active');
-      listBtn.siblings().removeClass('active');
+      if(isReady){
+         const listBtn = $(this);
+         const index = listBtn.index();
 
-      const selectedNavBox = $('.nav-box').eq(index);
-      selectedNavBox.addClass('active');
-      selectedNavBox.siblings().removeClass('active');
+         const selectedNavBox = $('.nav-box').eq(index);
+        
+         if(selectedNavBox.is('.active')){
+            console.log('already active');
+         }
+         else {
+            isReady = false;
+            $('.nav-box.active').slideUp(300, function(){
+               listBtn.addClass('active');
+               listBtn.siblings().removeClass('active');
+               selectedNavBox.addClass('active');
+               selectedNavBox.siblings().removeClass('active');
+               selectedNavBox.slideDown(300, function(){ 
+                  isReady = true;
+               });
+            });
+         }
+      }
    })
 })
