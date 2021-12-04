@@ -72,6 +72,22 @@
       .active{
          background-color: rgb(160, 160, 160) !important;
       }
+      #nav-section{
+         min-height: 214px;
+         margin: 20px auto;
+      }
+      .images-slider{
+         max-width: 600px;
+         max-height: 400px;
+         margin: auto;
+         display: flex;
+         flex-wrap: nowrap;
+         overflow: hidden;
+      }
+      .images-slider::-webkit-scrollbar{
+         width: 0;
+         height: 0;
+      }
    </style>
 </head>
 <body>
@@ -102,7 +118,7 @@
 
    <br/>
 
-   <section>
+   <div id="nav-section">
       <ul class="nav">
          <li class="active">Panel 1</li>
          <li>Panel 2</li>
@@ -140,6 +156,16 @@
             <li>Text 3</li>
             <li>Text 4</li>
          </ul>
+      </div>
+   </div>
+
+   <section>
+      <div class="images-slider">
+         <img src="https://cdn.wallpapersafari.com/30/37/7IbkUt.jpg" alt="image">
+         <img src="https://cdn.wallpapersafari.com/64/77/S1giRy.jpg" alt="image">
+         <img src="https://s1.1zoom.me/prev/588/Summer_Sea_Waves_Starfish_Sand_Bokeh_587636_600x400.jpg" alt="image">
+         <img src="https://s1.1zoom.me/prev/578/Forests_Tree_stump_Moss_Trees_Bokeh_577820_600x400.jpg" alt="image">
+         <img src="https://cdn.wallpapersafari.com/95/38/ywkbs5.jpg" alt="image">
       </div>
    </section>
 </body>
