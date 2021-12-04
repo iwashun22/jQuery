@@ -1,3 +1,4 @@
+'use strict';
 // $(document).ready(function(){
 
    // code goes here
@@ -48,17 +49,14 @@ $(function(){
       }
    })
 
-   scrollImage();
+   scrollImage(1000, 3000);
 })
 
-function scrollImage(){
+function scrollImage(sspeed, ps){
    const $imageSlider = $('.images-slider');
-   const $images = $imageSlider.find('img');
-   const $firstImage = $images.eq(0);
-   let counter = 1;
 
-   const pause = 1000;
-   const slideSpeed = 1000;
+   const pause = ps;
+   const slideSpeed = sspeed;
    const slideWidth = 600;
 
    let slider = setInterval(slide, pause);
@@ -74,12 +72,13 @@ function scrollImage(){
    })
 
    function slide() {
-      $firstImage.animate({marginLeft: '-='+slideWidth}, slideSpeed, function(){
-         counter++;
-         if(counter === $images.length){
-            counter = 1;
-            $firstImage.css({marginLeft: 0});
-         }
+      const $img_sli = $('.images-slider');
+      const $img = $img_sli.find('img');
+      const $f_img = $img.eq(0);
+      $f_img.animate({marginLeft: '-='+slideWidth}, slideSpeed, function(){
+         const src = $f_img.attr('src');
+         $f_img.remove();
+         $img_sli.append(`<img src="${src}" alt="image">`);
       });
    }
 }
