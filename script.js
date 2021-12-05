@@ -52,14 +52,12 @@ $(function(){
    scrollImage(1000, 3000);
 })
 
-function scrollImage(sspeed, ps){
+function scrollImage(slideSpeed = 1000, pauseDuration = 1000){
    const $imageSlider = $('.images-slider');
 
-   const pause = ps;
-   const slideSpeed = sspeed;
    const slideWidth = 600;
 
-   let slider = setInterval(slide, pause);
+   let slider = setInterval(slide, pauseDuration);
 
    $imageSlider.on('mouseenter', function() {
       clearInterval(slider);
