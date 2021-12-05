@@ -6,6 +6,12 @@ This is a javascript library that makes shorten and easier code for DOM.
 
 ## In your code
 
+To use jQuery you need to either download or include the code in your html.
+
+```html
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"><script>
+```
+
 Every time you write the code, you need to add this method
 
 ```js
