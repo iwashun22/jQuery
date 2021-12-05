@@ -62,9 +62,7 @@ function scrollImage(slideSpeed = 1000, pauseDuration = 1000){
    $imageSlider.on('mouseenter', function() {
       clearInterval(slider);
       slider = null
-   })
-
-   $imageSlider.on('mouseleave', function() {
+   }).on('mouseleave', function() {
       if(!slider)
       slider = setInterval(slide, pauseDuration);
    })
