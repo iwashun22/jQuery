@@ -66,7 +66,7 @@ function scrollImage(slideSpeed = 1000, pauseDuration = 1000){
 
    $imageSlider.on('mouseleave', function() {
       if(!slider)
-      slider = setInterval(slide, pause);
+      slider = setInterval(slide, pauseDuration);
    })
 
    function slide() {
