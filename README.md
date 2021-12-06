@@ -29,3 +29,11 @@ This code will wait until the document loads and ready to start.
       // code goes here
    });
 ```
+
+## AJAX
+
+This is second topic to learn in jQuery.
+AJAX is Asynchronous JavaScript And XML.
+It works like the back-end service.
+
+[Here](https://github.com/iwashun22/jQuery-AJAX) is the link to AJAX lesson
